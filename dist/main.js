@@ -15,7 +15,7 @@
   \**********************/
 /***/ ((__unused_webpack_module, exports) => {
 
-eval("\nfunction testingTest() {\n  return true;\n}\n\n\nexports.testingTest = testingTest;\n\n\n//# sourceURL=webpack://odin-battleship/./src/index.js?");
+eval("function testingTest() {\n  return true;\n}\n\nconsole.log('test');\n\nexports.testingTest = testingTest;\n\n\n//# sourceURL=webpack://odin-battleship/./src/index.js?");
 
 /***/ })
 
