@@ -1,8 +1,14 @@
-console.log('test');
+const testExport = require('./import-test')
 
 function testingTest() {
-    return false;
+  return false;
 }
 
+function importValueTest() {
+    testExport();
+}
+
+importValueTest()
 
 exports.testingTest = testingTest;
+exports.importValueTest = importValueTest;
