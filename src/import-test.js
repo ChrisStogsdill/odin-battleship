@@ -1,5 +1,5 @@
 function testExport() {
-   console.log('test from testExport');
+   //console.log('test from testExport');
    return 'successful export';
 }
 

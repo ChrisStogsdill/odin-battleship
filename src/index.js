@@ -1,14 +1,16 @@
-const testExport = require('./import-test')
+const testExport = require('./import-test');
 
 function testingTest() {
   return false;
 }
 
 function importValueTest() {
-    testExport();
+  const test = testExport();
+  console.log(test)
+  return test;
 }
 
-importValueTest()
+importValueTest();
 
 exports.testingTest = testingTest;
 exports.importValueTest = importValueTest;

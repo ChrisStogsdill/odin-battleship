@@ -15,7 +15,7 @@
   \****************************/
 /***/ ((module) => {
 
-eval("function testExport() {\n   console.log('test from testExport');\n   return 'successful export';\n}\n\nmodule.exports = testExport;\n\n\n//# sourceURL=webpack://odin-battleship/./src/import-test.js?");
+eval("function testExport() {\n   //console.log('test from testExport');\n   return 'successful export';\n}\n\nmodule.exports = testExport;\n\n\n//# sourceURL=webpack://odin-battleship/./src/import-test.js?");
 
 /***/ }),
 
@@ -25,7 +25,7 @@ eval("function testExport() {\n   console.log('test from testExport');\n   retur
   \**********************/
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
-eval("const testExport = __webpack_require__(/*! ./import-test */ \"./src/import-test.js\")\n\nfunction testingTest() {\n  return false;\n}\n\nfunction importValueTest() {\n    testExport();\n}\n\nimportValueTest()\n\nexports.testingTest = testingTest;\nexports.importValueTest = importValueTest;\n\n\n//# sourceURL=webpack://odin-battleship/./src/index.js?");
+eval("const testExport = __webpack_require__(/*! ./import-test */ \"./src/import-test.js\");\n\nfunction testingTest() {\n  return false;\n}\n\nfunction importValueTest() {\n  const test = testExport();\n  console.log(test)\n  return test;\n}\n\nimportValueTest();\n\nexports.testingTest = testingTest;\nexports.importValueTest = importValueTest;\n\n\n//# sourceURL=webpack://odin-battleship/./src/index.js?");
 
 /***/ })
 
