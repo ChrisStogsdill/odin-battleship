@@ -9,58 +9,24 @@
 /******/ (() => { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
-/***/ "./src/import-test.js":
-/*!****************************!*\
-  !*** ./src/import-test.js ***!
-  \****************************/
-/***/ ((module) => {
-
-eval("function testExport() {\n   //console.log('test from testExport');\n   return 'successful export';\n}\n\nmodule.exports = testExport;\n\n\n//# sourceURL=webpack://odin-battleship/./src/import-test.js?");
-
-/***/ }),
-
 /***/ "./src/index.js":
 /*!**********************!*\
   !*** ./src/index.js ***!
   \**********************/
-/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+/***/ ((__unused_webpack_module, exports) => {
 
-eval("const testExport = __webpack_require__(/*! ./import-test */ \"./src/import-test.js\");\n\nfunction testingTest() {\n  return false;\n}\n\nfunction importValueTest() {\n  const test = testExport();\n  console.log(test)\n  return test;\n}\n\nimportValueTest();\n\nexports.testingTest = testingTest;\nexports.importValueTest = importValueTest;\n\n\n//# sourceURL=webpack://odin-battleship/./src/index.js?");
+eval("\nfunction testingTest() {\n  return true;\n}\n\n\nexports.testingTest = testingTest;\n\n\n//# sourceURL=webpack://odin-battleship/./src/index.js?");
 
 /***/ })
 
 /******/ 	});
 /************************************************************************/
-/******/ 	// The module cache
-/******/ 	var __webpack_module_cache__ = {};
-/******/ 	
-/******/ 	// The require function
-/******/ 	function __webpack_require__(moduleId) {
-/******/ 		// Check if module is in cache
-/******/ 		var cachedModule = __webpack_module_cache__[moduleId];
-/******/ 		if (cachedModule !== undefined) {
-/******/ 			return cachedModule.exports;
-/******/ 		}
-/******/ 		// Create a new module (and put it into the cache)
-/******/ 		var module = __webpack_module_cache__[moduleId] = {
-/******/ 			// no module.id needed
-/******/ 			// no module.loaded needed
-/******/ 			exports: {}
-/******/ 		};
-/******/ 	
-/******/ 		// Execute the module function
-/******/ 		__webpack_modules__[moduleId](module, module.exports, __webpack_require__);
-/******/ 	
-/******/ 		// Return the exports of the module
-/******/ 		return module.exports;
-/******/ 	}
-/******/ 	
-/************************************************************************/
 /******/ 	
 /******/ 	// startup
 /******/ 	// Load entry module and return exports
 /******/ 	// This entry module can't be inlined because the eval devtool is used.
-/******/ 	var __webpack_exports__ = __webpack_require__("./src/index.js");
+/******/ 	var __webpack_exports__ = {};
+/******/ 	__webpack_modules__["./src/index.js"](0, __webpack_exports__);
 /******/ 	
 /******/ })()
 ;
