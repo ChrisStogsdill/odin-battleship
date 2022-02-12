@@ -1,5 +1,8 @@
 const index = require('./src/index');
 
-test('test jest is working', () => {
-  expect(index.testingTest()).toBe(false);
+describe('ship factory function', () => {
+  const testShip = index.newShip(2);
+  test('length property is set', () => {
+    expect(testShip.length).toBe(2);
+  });
 });
