@@ -4,7 +4,7 @@ function newShip(length) {
     positions: [],
   };
 }
-// draw the game board
+// function to draw the game board
 function drawGameBoard(GameBoardLength = 10, containerId = 'game-board-container') {
   const gameBoardContainer = document.getElementById(containerId);
   const singleSquareWidth = gameBoardContainer.clientWidth / GameBoardLength;
@@ -20,11 +20,21 @@ function drawGameBoard(GameBoardLength = 10, containerId = 'game-board-container
     currentBoardPiece.style.height = singleSquareHeight;
     currentBoardPiece.style.width = singleSquareWidth;
     // set attributes
-    currentBoardPiece.setAttributes(
-        data-row: rowCounter.toString();
-        data-column: 
-    );
+    currentBoardPiece.setAttribute('data-row', rowCounter);
+    currentBoardPiece.setAttribute('data-column', columnCounter);
+
+    // increment columnCounter
+    columnCounter = Math.floor((i + 1) / 10);
+    // increment rowCounter
+    if (rowCounter === GameBoardLength - 1) {
+      rowCounter = 0;
+    } else {
+      rowCounter += 1;
+    }
   }
 }
+
+// draw game board
+drawGameBoard();
 
 exports.newShip = newShip;
