@@ -34,7 +34,16 @@ function drawGameBoard(GameBoardLength = 10, containerId = 'game-board-container
   }
 }
 
+// function to clear the game board
+function clearGameBoard() {
+  const gameBoardContainer = document.getElementById('game-board-container');
+  while (gameBoardContainer.hasChildNodes) {
+    gameBoardContainer.removeChild(gameBoardContainer.firstChild);
+  }
+}
+
 // draw game board
 drawGameBoard();
+
 
 exports.newShip = newShip;
