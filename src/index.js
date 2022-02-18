@@ -1,11 +1,22 @@
+// factory function for ship objects
 function newShip(length) {
   return {
     length,
     positions: [],
   };
 }
+
+// declare initial ships
+const ships = {};
+
+ships.ship1 = newShip(2);
+ships.ship2 = newShip(3);
+ships.ship3 = newShip(3);
+ships.ship4 = newShip(4);
+ships.ship5 = newShip(5);
+
 // function to draw the game board
-function drawGameBoard(GameBoardLength = 10, containerId = 'game-board-container') {
+function drawGameBoard(GameBoardLength = 10, containerId = 'game-board-container-one') {
   const gameBoardContainer = document.getElementById(containerId);
   const singleSquareWidth = gameBoardContainer.clientWidth / GameBoardLength;
   const singleSquareHeight = gameBoardContainer.clientWidth / GameBoardLength;
@@ -35,15 +46,15 @@ function drawGameBoard(GameBoardLength = 10, containerId = 'game-board-container
 }
 
 // function to clear the game board
-function clearGameBoard() {
-  const gameBoardContainer = document.getElementById('game-board-container');
+function clearGameBoard(containerName) {
+  const gameBoardContainer = document.getElementById(containerName);
   while (gameBoardContainer.hasChildNodes) {
     gameBoardContainer.removeChild(gameBoardContainer.firstChild);
   }
 }
 
 // draw game board
-drawGameBoard();
-
+drawGameBoard(10, 'game-board-container-one');
+drawGameBoard(10, 'game-board-container-two');
 
 exports.newShip = newShip;
