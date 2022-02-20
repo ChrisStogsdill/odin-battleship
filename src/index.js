@@ -15,6 +15,11 @@ ships.ship3 = newShip(3);
 ships.ship4 = newShip(4);
 ships.ship5 = newShip(5);
 
+// set ship location
+function setShipLocation(ship, [column, row] {
+  
+})
+
 // function to draw the game board
 function drawGameBoard(GameBoardLength = 10, containerId = 'game-board-container-one') {
   const gameBoardContainer = document.getElementById(containerId);
